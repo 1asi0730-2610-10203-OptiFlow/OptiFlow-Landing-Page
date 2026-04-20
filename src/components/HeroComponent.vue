@@ -2,12 +2,10 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import * as THREE from 'three';
 import "@fontsource/istok-web";
-import {plane} from "three/addons";
 
-const activeItem = ref('30%');
+const activeItem = ref('medical');
 const canvasRef = ref(null);
 
-// Declare variables WITHOUT type annotations (this is JavaScript, not TypeScript)
 let scene;
 let camera;
 let renderer;
@@ -15,18 +13,32 @@ let objects = [];
 let animationId;
 
 const benefits = ref([
-  { percentage: '30%', label: 'Reducción en errores médicos' },
-  { percentage: '40%', label: 'Aumento en volumen de atención' },
-  { percentage: '90%', label: 'Menos trabajos rehechos' },
-  { percentage: '80%', label: 'Menos consultas de pacientes' }
+  {
+    id: 'medical',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>`,
+    label: 'Reduce errores de producción'
+  },
+  {
+    id: 'satisfaction',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>`,
+    label: 'Mejora la satisfacción del cliente'
+  },
+  {
+    id: 'communication',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>`,
+    label: 'Mejora en la comunicación'
+  },
+  {
+    id: 'workflow',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+    label: 'Flujo de trabajo eficiente'
+  }
 ]);
 
 // Initialize Three.js scene
 const initThree = () => {
-  // Scene setup - use THREE.Scene (capital S)
   scene = new THREE.Scene();
 
-  // Camera setup - use THREE.PerspectiveCamera (correct capitalization)
   camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
@@ -35,7 +47,6 @@ const initThree = () => {
   );
   camera.position.z = 5;
 
-  // Renderer setup
   renderer = new THREE.WebGLRenderer({
     canvas: canvasRef.value,
     alpha: true,
@@ -44,7 +55,6 @@ const initThree = () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
 
-  // Add lighting
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
   scene.add(ambientLight);
 
@@ -52,16 +62,11 @@ const initThree = () => {
   pointLight.position.set(5, 5, 5);
   scene.add(pointLight);
 
-  // Create 3D objects
   createObjects();
-
-  // Start animation
   animate();
 };
 
-// Create various 3D objects
 const createObjects = () => {
-  // 1. Torus (donut shape)
   const torusGeometry = new THREE.TorusGeometry(1, 0.4, 16, 100);
   const torusMaterial = new THREE.MeshStandardMaterial({
     color: 0x00ffff,
@@ -74,7 +79,6 @@ const createObjects = () => {
   scene.add(torus);
   objects.push({ mesh: torus, rotationSpeed: { x: 0.01, y: 0.02 } });
 
-  // 2. Cube
   const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
   const cubeMaterial = new THREE.MeshStandardMaterial({
     color: 0xff00ff,
@@ -86,7 +90,6 @@ const createObjects = () => {
   scene.add(cube);
   objects.push({ mesh: cube, rotationSpeed: { x: 0.02, y: 0.01 } });
 
-  // 3. Sphere
   const sphereGeometry = new THREE.SphereGeometry(0.8, 32, 32);
   const sphereMaterial = new THREE.MeshStandardMaterial({
     color: 0x00ff00,
@@ -98,7 +101,6 @@ const createObjects = () => {
   scene.add(sphere);
   objects.push({ mesh: sphere, rotationSpeed: { x: 0.015, y: 0.025 } });
 
-  // 4. Icosahedron (crystal-like)
   const icoGeometry = new THREE.IcosahedronGeometry(1, 0);
   const icoMaterial = new THREE.MeshStandardMaterial({
     color: 0xffff00,
@@ -111,17 +113,14 @@ const createObjects = () => {
   objects.push({ mesh: icosahedron, rotationSpeed: { x: 0.01, y: 0.03 } });
 };
 
-// Animation loop
 const animate = () => {
   animationId = requestAnimationFrame(animate);
 
-  // Rotate each object
   objects.forEach(obj => {
     obj.mesh.rotation.x += obj.rotationSpeed.x;
     obj.mesh.rotation.y += obj.rotationSpeed.y;
   });
 
-  // Optional: Add floating motion
   objects.forEach((obj, index) => {
     obj.mesh.position.y += Math.sin(Date.now() * 0.001 + index) * 0.002;
   });
@@ -129,14 +128,12 @@ const animate = () => {
   renderer.render(scene, camera);
 };
 
-// Handle window resize
 const handleResize = () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 };
 
-// Lifecycle hooks
 onMounted(() => {
   initThree();
   window.addEventListener('resize', handleResize);
@@ -151,38 +148,39 @@ onUnmounted(() => {
 });
 </script>
 
-
 <template>
-  <section class = "hero-section" id = "hero-section">
+  <section class="hero-section" id="hero-section">
     <canvas ref="canvasRef" class="three-canvas"></canvas>
 
-    <div class ="hero-wrapper" id = "hero-wrapper">
-
-      <div class ="hero-title" id = "hero-tittle">
-        <h1> Transforma la gestión de tu óptica con OptiFlow </h1>
-        <p class="hero-description"> Conecta consultorio, ventas y laboratorio en una sola plataforma. Elimina errores de comunicación, reduce tiempos de espera y aumenta la rentabilidad de tu optica.</p>
-        <button type="submit" class = "hero-button" >
-          Comenzar ahora <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+    <div class="hero-wrapper" id="hero-wrapper">
+      <div class="hero-title" id="hero-title">
+        <h1>Transforma la gestión de tu óptica con OptiFlow</h1>
+        <p class="hero-description">
+          Conecta consultorio, ventas y laboratorio en una sola plataforma. Elimina errores de comunicación, reduce tiempos de espera y aumenta la rentabilidad de tu óptica.
+        </p>
+        <button type="submit" class="hero-button">
+          Comenzar ahora
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon" aria-hidden="true">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
         </button>
       </div>
 
-      <div class = "beneifts-column" id = "beneifs-column">
-        <div v-for="item in benefits"
-             :key="item.percentage"
-             class="benefit-item"
-             @click="activeItem = item.percentage"
-             :class="{ 'is-active': activeItem === item.percentage }"
+      <div class="benefits-column" id="benefits-column">
+        <div
+            v-for="item in benefits"
+            :key="item.id"
+            class="benefit-item"
+            @click="activeItem = item.id"
+            :class="{ 'is-active': activeItem === item.id }"
         >
-          <span class="benefit-number">{{ item.percentage }}</span>
+          <div class="benefit-icon" v-html="item.icon"></div>
           <p class="benefit-label">{{ item.label }}</p>
-
         </div>
       </div>
-
-
     </div>
   </section>
-
 </template>
 
 <style scoped>
@@ -192,14 +190,13 @@ onUnmounted(() => {
 
 .hero-section {
   opacity: 1;
-  color:white;
+  color: white;
   position: relative;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
 }
 
-/* Three.js Canvas as background */
 .three-canvas {
   position: absolute;
   top: 0;
@@ -211,7 +208,7 @@ onUnmounted(() => {
 }
 
 .hero-wrapper {
-  background: linear-gradient(0deg, turquoise,  black);
+  background: linear-gradient(0deg, #00C1B0, black);
   opacity: 0.8;
   position: relative;
   z-index: 1;
@@ -247,15 +244,27 @@ onUnmounted(() => {
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  background: turquoise;
+  background: #00C1B0;
   border: none;
   border-radius: 4px;
   font-weight: bold;
-  align-content: center;
   align-items: center;
-  align-items: center;
-  padding: 1%;
+  gap: 8px;
+  padding: 12px 24px;
   text-align: center;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background: #00a89a;
+}
+
+.arrow-icon {
+  transition: transform 0.3s;
+}
+
+.hero-button:hover .arrow-icon {
+  transform: translateX(4px);
 }
 
 .benefits-column {
@@ -273,22 +282,33 @@ onUnmounted(() => {
   align-items: center;
   cursor: pointer;
   transition: transform 0.2s;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .benefit-item:hover {
   transform: scale(1.05);
+  background: rgba(0, 193, 176, 0.1);
 }
 
-.benefit-number {
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1;
-  color: cyan;
+.benefit-item.is-active {
+  background: rgba(0, 193, 176, 0.2);
+}
+
+.benefit-icon {
+  color: #00C1B0;
+  margin-bottom: 12px;
+  transition: transform 0.3s;
+}
+
+.benefit-item:hover .benefit-icon {
+  transform: rotateY(360deg);
 }
 
 .benefit-label {
-  margin-top: 8px;
+  margin: 0;
   font-size: 14px;
   color: white;
+  max-width: 200px;
 }
 </style>

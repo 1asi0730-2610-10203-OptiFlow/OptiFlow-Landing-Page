@@ -17,6 +17,9 @@ const hover = () => {
 
 <header class = "main-header" id = "main-header">
   <nav class="nav-bar">
+    <div class = "logo" id = "logo">
+      <img src = "">
+    </div>
     <ul class="nav-list">
       <button
           v-for="item in menuItems"
@@ -27,6 +30,11 @@ const hover = () => {
         {{ item }}
       </button>
     </ul>
+
+    <div class = "login-btn-wrapper">
+      <button class ="login-btn" id ="login-btn"> Login </button>
+    </div>
+
   </nav>
 </header>
 </template>
@@ -36,8 +44,10 @@ const hover = () => {
 .main-header {
   background: black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   font-family: "Istok Web";
+  justify-content: space-between;
+  align-items: center;
 
 }
 
@@ -52,12 +62,19 @@ const hover = () => {
 
 }
 
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 65%;
+}
+
 
 
 ul {
   list-style-type: none;
   display:flex;
-  gap: 10%;
+  gap: 20%;
   justify-content: center;
 }
 
@@ -92,6 +109,33 @@ ul {
   width: 100%;
 }
 
+
+.login-btn {
+  display: flex;
+  border: none;
+  background: #93C1CE;
+  border-radius: 15px;
+  padding: 50%;
+  padding-left: 200%;
+  padding-right: 200%;
+  cursor: pointer;
+
+}
+
+.login-btn:hover {
+  background: #c8e3ed;
+  transition: 0.2s ease-in-out;
+
+}
+
+.login-btn-wrapper {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
 
 
 </style>
