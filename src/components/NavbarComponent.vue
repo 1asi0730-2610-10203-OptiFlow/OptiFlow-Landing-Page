@@ -37,6 +37,7 @@ const hover = () => {
   background: black;
   display: flex;
   justify-content: center;
+  font-family: "Istok Web";
 
 }
 

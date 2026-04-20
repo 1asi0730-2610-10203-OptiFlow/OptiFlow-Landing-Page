@@ -1,9 +1,9 @@
 <script setup>
-import Navbar from './components/NavbarComponent.vue'
 import NavbarComponent from "./components/NavbarComponent.vue";
+import HeroCopmonent from "./components/HeroComponent.vue";
 
 </script>
 <template>
   <NavbarComponent/>
-
+  <HeroCopmonent/>
 </template>

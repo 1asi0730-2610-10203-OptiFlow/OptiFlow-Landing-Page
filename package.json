@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/istok-web": "^5.2.8",
+    "fonts": "^0.0.2",
     "vue": "^3.5.32"
   },
   "devDependencies": {
