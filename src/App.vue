@@ -1,4 +1,5 @@
 <script setup>
+import FeaturesSection from './components/FeaturesSection.vue'
 import NavbarComponent from "./components/NavbarComponent.vue";
 import HeroCopmonent from "./components/HeroComponent.vue";
 
@@ -6,4 +7,5 @@ import HeroCopmonent from "./components/HeroComponent.vue";
 <template>
   <NavbarComponent/>
   <HeroCopmonent/>
+  <FeaturesSection />
 </template>
