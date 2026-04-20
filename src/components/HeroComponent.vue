@@ -226,7 +226,7 @@ onUnmounted(() => {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 20%;
 }
 
 .hero-title h1 {
