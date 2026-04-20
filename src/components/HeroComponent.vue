@@ -51,7 +51,7 @@ const benefits = ref([
 }
 
 .hero-section {
-  background: linear-gradient(45deg, white, mediumturquoise,g darkturquoise);
+  background: linear-gradient(45deg, white, mediumturquoise, darkturquoise);
   padding: 0;
   padding-top: 3%;
   padding-bottom: 3%;
