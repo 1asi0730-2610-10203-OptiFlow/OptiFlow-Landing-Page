@@ -1,0 +1,14 @@
+body {
+    background: radial-gradient( turquoise, black );
+
+    /* 2. Stop the repeating stripes */
+    background-repeat: no-repeat;
+
+    /* 3. Make it cover the entire viewport height */
+    background-attachment: fixed; /* Keeps it steady while scrolling */
+
+    /* 4. Ensure it stretches correctly */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
