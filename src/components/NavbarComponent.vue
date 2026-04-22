@@ -1,11 +1,11 @@
 <script setup>
 import {ref } from "vue";
+import logo from "../assets/logo.svg";
 
 
 
 const activeItem = ref('Features'); // 'Features' is active by default
-const menuItems = ['Features', 'Modules', 'Benefits', 'Contact'];
-
+const menuItems = ['About Us', 'Features', 'Two Experiences', 'Pricing', 'Contact'];
 const hover = () => {
   return !selected;
 }
@@ -17,8 +17,11 @@ const hover = () => {
 
 <header class = "main-header" id = "main-header">
   <nav class="nav-bar">
-    <div class = "logo" id = "logo">
-      <img src = "">
+    <div class="logo">
+      <img :src="logo" class="logo-img">
+      <span class="logo-text">
+        Opti<span class="highlight">Flow</span>
+      </span>
     </div>
     <ul class="nav-list">
       <button
@@ -32,7 +35,7 @@ const hover = () => {
     </ul>
 
     <div class = "login-btn-wrapper">
-      <button class ="login-btn" id ="login-btn"> Login </button>
+      <button class ="login-btn" id ="login-btn"> Iniciar Sesión </button>
     </div>
 
   </nav>
@@ -43,11 +46,9 @@ const hover = () => {
 
 .main-header {
   background: black;
-  display: flex;
   flex-direction: column;
   font-family: "Istok Web";
   justify-content: space-between;
-  align-items: center;
 
 }
 
@@ -64,18 +65,17 @@ const hover = () => {
 
 .nav-bar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  gap: 65%;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-
-
-ul {
-  list-style-type: none;
-  display:flex;
-  gap: 20%;
+.nav-list {
+  display: flex;
   justify-content: center;
+  gap: 30px;
 }
 
 .nav-item {
@@ -111,15 +111,19 @@ ul {
 
 
 .login-btn {
-  display: flex;
+  background: #9ec3cf;
+  color: black;
+  padding: 10px 30px;
+  border-radius: 10px;
   border: none;
-  background: #93C1CE;
-  border-radius: 15px;
-  padding: 50%;
-  padding-left: 200%;
-  padding-right: 200%;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
+  transition: 0.2s ease;
+}
 
+.login-btn:hover {
+  background: #c3dde6;
 }
 
 .login-btn:hover {
@@ -137,5 +141,24 @@ ul {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.logo-img {
+  height: 65px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.highlight {
+  color: #00C1B0;
+}
 
 </style>
