@@ -7,7 +7,7 @@
     <div class="container">
 
       <!-- TITLE -->
-      <h2 class="title">Two experiences</h2>
+      <h2 class="title">Experiencias para todos</h2>
 
       <!-- CARD 1 -->
       <div class="experience-card">
@@ -39,7 +39,7 @@
 </template>
 
 <style scoped>
-* {
+.two-experiences {
   font-family: 'Istok Web';
 }
 
@@ -63,8 +63,11 @@
 /* TITLE */
 .title {
   text-align: center;
-  color: white;
-  font-size: 32px;
+  color: white; /* cambia a blanco en tu sección */
+  font-size: 2.5rem; /* 🔥 igual que Features */
+  margin-bottom: 30px; /* mismo espacio que header */
+  text-transform: uppercase; /* 🔥 igual */
+  letter-spacing: 2px; /* 🔥 igual */
   font-weight: 600;
 }
 
