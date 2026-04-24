@@ -1,0 +1,113 @@
+{
+  "navbar": {
+    "about-us": "Sobre Nosotros",
+    "features": "Funcionalidades",
+    "two-experiences": "Dos Experiencias",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión"
+  },
+  "hero": {
+    "title": "Transforma la gestión de tu óptica con OptiFlow",
+    "description": "Conecta consultorio, ventas y laboratorio en una sola plataforma. Elimina errores de comunicación, reduce tiempos de espera y aumenta la rentabilidad de tu óptica.",
+    "cta": "Comenzar ahora",
+    "welcome": "¡Bienvenido, {name}!",
+    "benefits": {
+      "medical": "Reduce errores de producción",
+      "satisfaction": "Mejora la satisfacción del cliente",
+      "communication": "Mejora en la comunicación",
+      "workflow": "Flujo de trabajo eficiente"
+    }
+  },
+  "features": {
+    "title": "Funcionalidades",
+    "subtitle": "Todo lo que tu óptica necesita para escalar al siguiente nivel.",
+    "cards": {
+      "consultations": {
+        "title": "Gestión de Consultas",
+        "description": "Agenda inteligente con recordatorios automáticos para reducir faltas."
+      },
+      "inventory": {
+        "title": "Inventario Real",
+        "description": "Control exacto de armazones y micas con alertas de stock bajo."
+      },
+      "laboratory": {
+        "title": "Laboratorio",
+        "description": "Seguimiento de órdenes desde la graduación hasta la entrega final."
+      },
+      "crm": {
+        "title": "CRM Pacientes",
+        "description": "Historial clínico completo y fidelización personalizada."
+      },
+      "sales": {
+        "title": "Ventas y POS",
+        "description": "Facturación rápida y reportes de ingresos diarios."
+      },
+      "analytics": {
+        "title": "Analítica",
+        "description": "Métricas clave de rentabilidad para decisiones basadas en datos."
+      }
+    }
+  },
+  "two-experiences": {
+    "title": "Experiencias para todos",
+    "client": {
+      "heading": "¿Eres un cliente?",
+      "subtitle": "¿Sientes que no recibes respuestas de las ópticas?, ¿retrasos largos y falta de comunicación?",
+      "description": "OptiFlow permite que puedas rastrear desde una aplicación web el estado de tu orden, sin tener que ir al local físicamente o tener que insistir constantemente por información a la empresa."
+    },
+    "optics": {
+      "heading": "¿Eres una óptica?",
+      "description1": "Mejora el CRM de tu empresa mediante la aplicación para clientes, mejora la emisión y el rastreo de órdenes y citas, mejora el registro, creación y análisis de ventas y organiza la información de tus clientes.",
+      "description2": "Nuestro sistema permitirá acelerar tu flujo de trabajo, minimizando el margen de error al digitalizar y concentrar toda la comunicación en un solo sistema práctico y sencillo de usar."
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "cta": {
+      "intro": "Impulsa tu óptica con OptiFlow",
+      "heading": "¡Consigue OptiFlow Ya!",
+      "demo-button": "Solicitar Demo",
+      "stat-optics": "+160 ópticas en Perú satisfechas",
+      "satisfied-clients": "ningún cliente satisfecho | un cliente satisfecho | +{n}k clientes satisfechos"
+    },
+    "form": {
+      "name": "Nombre",
+      "surname": "Apellido",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "placeholder": "Valor",
+      "submit": "Enviar"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Empresa",
+      "about-us": "@:navbar.about-us",
+      "careers": "Empleos",
+      "contact-sales": "Contactar Ventas",
+      "leadership": "Liderazgo",
+      "sustainability": "Sostenibilidad",
+      "accessibility": "Accesibilidad"
+    },
+    "product": {
+      "title": "Producto",
+      "features": "@:navbar.features",
+      "pricing": "@:navbar.pricing",
+      "release-notes": "Notas de Versión",
+      "enterprise": "Empresarial",
+      "security": "Seguridad",
+      "downloads": "Descargas",
+      "status": "Estado"
+    },
+    "legal": {
+      "title": "Legal y Privacidad",
+      "privacy-policy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "cookies": "Configuración de Cookies",
+      "compliance": "Cumplimiento",
+      "ip": "Propiedad Intelectual",
+      "subprocessors": "Subprocesadores"
+    }
+  }
+}
