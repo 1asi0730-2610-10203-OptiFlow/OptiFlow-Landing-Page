@@ -6,58 +6,38 @@ import "@fontsource/istok-web";
 const activeItem = ref('medical');
 const canvasRef = ref(null);
 
-let scene;
-let camera;
-let renderer;
-let objects = [];
-let animationId;
+let scene, camera, renderer, objects = [], animationId;
 
+// Only ids and icons live here — labels are resolved via $t('hero.benefits.<id>')
 const benefits = ref([
   {
     id: 'medical',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>`,
-    label: 'Reduce errores de producción'
   },
   {
     id: 'satisfaction',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>`,
-    label: 'Mejora la satisfacción del cliente'
   },
   {
     id: 'communication',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>`,
-    label: 'Mejora en la comunicación'
   },
   {
     id: 'workflow',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
-    label: 'Flujo de trabajo eficiente'
-  }
+  },
 ]);
 
-// Initialize Three.js scene
 const initThree = () => {
   scene = new THREE.Scene();
-
-  camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-  );
+  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 5;
 
-  renderer = new THREE.WebGLRenderer({
-    canvas: canvasRef.value,
-    alpha: true,
-    antialias: true
-  });
+  renderer = new THREE.WebGLRenderer({ canvas: canvasRef.value, alpha: true, antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-  scene.add(ambientLight);
-
+  scene.add(new THREE.AmbientLight(0xffffff, 0.5));
   const pointLight = new THREE.PointLight(0x00ffff, 1);
   pointLight.position.set(5, 5, 5);
   scene.add(pointLight);
@@ -67,47 +47,34 @@ const initThree = () => {
 };
 
 const createObjects = () => {
-  const torusGeometry = new THREE.TorusGeometry(1, 0.4, 16, 100);
-  const torusMaterial = new THREE.MeshStandardMaterial({
-    color: 0x00ffff,
-    wireframe: false,
-    metalness: 0.5,
-    roughness: 0.2
-  });
-  const torus = new THREE.Mesh(torusGeometry, torusMaterial);
+  const torus = new THREE.Mesh(
+    new THREE.TorusGeometry(1, 0.4, 16, 100),
+    new THREE.MeshStandardMaterial({ color: 0x00ffff, metalness: 0.5, roughness: 0.2 })
+  );
   torus.position.set(-3, 2, 0);
   scene.add(torus);
   objects.push({ mesh: torus, rotationSpeed: { x: 0.01, y: 0.02 } });
 
-  const cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
-  const cubeMaterial = new THREE.MeshStandardMaterial({
-    color: 0xff00ff,
-    metalness: 0.7,
-    roughness: 0.3
-  });
-  const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+  const cube = new THREE.Mesh(
+    new THREE.BoxGeometry(1, 1, 1),
+    new THREE.MeshStandardMaterial({ color: 0xff00ff, metalness: 0.7, roughness: 0.3 })
+  );
   cube.position.set(3, -2, -2);
   scene.add(cube);
   objects.push({ mesh: cube, rotationSpeed: { x: 0.02, y: 0.01 } });
 
-  const sphereGeometry = new THREE.SphereGeometry(0.8, 32, 32);
-  const sphereMaterial = new THREE.MeshStandardMaterial({
-    color: 0x00ff00,
-    metalness: 0.6,
-    roughness: 0.4
-  });
-  const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+  const sphere = new THREE.Mesh(
+    new THREE.SphereGeometry(0.8, 32, 32),
+    new THREE.MeshStandardMaterial({ color: 0x00ff00, metalness: 0.6, roughness: 0.4 })
+  );
   sphere.position.set(0, -3, -1);
   scene.add(sphere);
   objects.push({ mesh: sphere, rotationSpeed: { x: 0.015, y: 0.025 } });
 
-  const icoGeometry = new THREE.IcosahedronGeometry(1, 0);
-  const icoMaterial = new THREE.MeshStandardMaterial({
-    color: 0xffff00,
-    wireframe: true,
-    metalness: 0.8
-  });
-  const icosahedron = new THREE.Mesh(icoGeometry, icoMaterial);
+  const icosahedron = new THREE.Mesh(
+    new THREE.IcosahedronGeometry(1, 0),
+    new THREE.MeshStandardMaterial({ color: 0xffff00, wireframe: true, metalness: 0.8 })
+  );
   icosahedron.position.set(2, 3, -3);
   scene.add(icosahedron);
   objects.push({ mesh: icosahedron, rotationSpeed: { x: 0.01, y: 0.03 } });
@@ -115,16 +82,11 @@ const createObjects = () => {
 
 const animate = () => {
   animationId = requestAnimationFrame(animate);
-
-  objects.forEach(obj => {
+  objects.forEach((obj, index) => {
     obj.mesh.rotation.x += obj.rotationSpeed.x;
     obj.mesh.rotation.y += obj.rotationSpeed.y;
-  });
-
-  objects.forEach((obj, index) => {
     obj.mesh.position.y += Math.sin(Date.now() * 0.001 + index) * 0.002;
   });
-
   renderer.render(scene, camera);
 };
 
@@ -142,9 +104,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', handleResize);
   cancelAnimationFrame(animationId);
-  if (renderer) {
-    renderer.dispose();
-  }
+  if (renderer) renderer.dispose();
 });
 </script>
 
@@ -154,12 +114,10 @@ onUnmounted(() => {
 
     <div class="hero-wrapper" id="hero-wrapper">
       <div class="hero-title" id="hero-title">
-        <h1>Transforma la gestión de tu óptica con OptiFlow</h1>
-        <p class="hero-description">
-          Conecta consultorio, ventas y laboratorio en una sola plataforma. Elimina errores de comunicación, reduce tiempos de espera y aumenta la rentabilidad de tu óptica.
-        </p>
-        <button type="submit" class="hero-button">
-          Comenzar ahora
+        <h1>{{ $t('hero.title') }}</h1>
+        <p class="hero-description">{{ $t('hero.description') }}</p>
+        <button type="button" class="hero-button">
+          {{ $t('hero.cta') }}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon" aria-hidden="true">
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
@@ -169,14 +127,14 @@ onUnmounted(() => {
 
       <div class="benefits-column" id="benefits-column">
         <div
-            v-for="item in benefits"
-            :key="item.id"
-            class="benefit-item"
-            @click="activeItem = item.id"
-            :class="{ 'is-active': activeItem === item.id }"
+          v-for="item in benefits"
+          :key="item.id"
+          class="benefit-item"
+          @click="activeItem = item.id"
+          :class="{ 'is-active': activeItem === item.id }"
         >
           <div class="benefit-icon" v-html="item.icon"></div>
-          <p class="benefit-label">{{ item.label }}</p>
+          <p class="benefit-label">{{ $t(`hero.benefits.${item.id}`) }}</p>
         </div>
       </div>
     </div>

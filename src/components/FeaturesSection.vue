@@ -1,66 +1,40 @@
-<template>
+<script setup>
+const featureKeys = [
+  'consultations',
+  'inventory',
+  'laboratory',
+  'crm',
+  'sales',
+  'analytics',
+]
+</script>
 
+<template>
   <section id="features" class="features-section">
     <div class="container">
       <div class="header">
-        <h2>Funcionalidades</h2>
-        <p>Todo lo que tu óptica necesita para escalar al siguiente nivel.</p>
+        <h2>{{ $t('features.title') }}</h2>
+        <p>{{ $t('features.subtitle') }}</p>
       </div>
 
       <div class="features-grid">
-        <!-- Tarjeta 1 -->
-        <div class="feature-card">
-          <h3>Gestión de Consultas</h3>
-          <p>Agenda inteligente con recordatorios automáticos para reducir faltas.</p>
-        </div>
-
-        <!-- Tarjeta 2 -->
-        <div class="feature-card">
-          <h3>Inventario Real</h3>
-          <p>Control exacto de armazones y micas con alertas de stock bajo.</p>
-        </div>
-
-        <!-- Tarjeta 3 -->
-        <div class="feature-card">
-          <h3>Laboratorio</h3>
-          <p>Seguimiento de órdenes desde la graduación hasta la entrega final.</p>
-        </div>
-
-        <!-- Tarjeta 4 -->
-        <div class="feature-card">
-          <h3>CRM Pacientes</h3>
-          <p>Historial clínico completo y fidelización personalizada.</p>
-        </div>
-
-        <!-- Tarjeta 5 -->
-        <div class="feature-card">
-          <h3>Ventas y POS</h3>
-          <p>Facturación rápida y reportes de ingresos diarios.</p>
-        </div>
-
-        <!-- Tarjeta 6 -->
-        <div class="feature-card">
-          <h3>Analítica</h3>
-          <p>Métricas clave de rentabilidad para decisiones basadas en datos.</p>
+        <div v-for="key in featureKeys" :key="key" class="feature-card">
+          <h3>{{ $t(`features.cards.${key}.title`) }}</h3>
+          <p>{{ $t(`features.cards.${key}.description`) }}</p>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-// Por ahora no necesitamos lógica aquí
-</script>
-
 <style scoped>
-/* Pegamos aquí tus variables y estilos */
 .features-section {
   --bg-color: #050a0e;
   --card-bg: #0d161d;
   --accent-color: #00f2c3;
   --text-main: #ffffff;
   --text-muted: #a0aec0;
-  
+
   background-color: var(--bg-color);
   padding: 80px 20px;
   font-family: 'Segoe UI', sans-serif;
@@ -127,8 +101,10 @@
 .feature-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 4px; height: 0;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
   background-color: var(--accent-color);
   transition: height 0.3s ease;
 }
