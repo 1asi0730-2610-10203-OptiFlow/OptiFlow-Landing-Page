@@ -21,7 +21,8 @@ const featureKeys = [
           <div class="feature-icon-container">
             <div class="feature-icon"></div>
           </div>
-          <p class="feature-title">{{ $t(`features.cards.${key}.title`) }}</p>
+          <h3 class="feature-title">{{ $t(`features.cards.${key}.title`) }}</h3>
+          <p class="feature-description">{{ $t(`features.cards.${key}.description`) }}</p>
         </div>
       </div>
     </div>
@@ -35,6 +36,7 @@ const featureKeys = [
   --accent-color: #00f2c3;
   --secondary-accent: #a3e635;
   --text-main: #ffffff;
+  --text-muted: #a0aec0;
   --border-color: #064e3b;
 
   background-color: var(--bg-color);
@@ -62,12 +64,12 @@ const featureKeys = [
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 20px;
 }
 
 .feature-card {
   background-color: var(--card-bg);
-  padding: 50px 30px;
+  padding: 40px 25px;
   border-radius: 20px;
   border: 2px solid var(--border-color);
   text-align: center;
@@ -75,7 +77,21 @@ const featureKeys = [
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: 250px;
+  /* Transición suave para el efecto hover */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--accent-color);
+  box-shadow: 0 15px 35px rgba(0, 242, 195, 0.15);
+}
+
+.feature-card:nth-child(n+4):hover {
+  border-color: var(--secondary-accent);
+  box-shadow: 0 15px 35px rgba(163, 230, 53, 0.15);
 }
 
 .feature-icon-container {
@@ -85,8 +101,13 @@ const featureKeys = [
 .feature-icon {
   width: 50px;
   height: 40px;
-  border-radius: 15px;
+  border-radius: 12px;
   background-color: var(--accent-color);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
 }
 
 .feature-card:nth-child(n+4) .feature-icon {
@@ -94,13 +115,20 @@ const featureKeys = [
 }
 
 .feature-title {
-  color: #d1d5db; /* Gris claro */
-  font-size: 1.1rem;
-  line-height: 1.4;
+  color: var(--text-main);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.feature-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
   margin: 0;
 }
 
-/* Responsivo: 1 columna en celulares */
 @media (max-width: 768px) {
   .features-grid {
     grid-template-columns: 1fr;
