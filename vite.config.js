@@ -9,4 +9,5 @@ import vue from '@vitejs/plugin-vue'
 //   enableInSFC: true  →  install @intlify/unplugin-vue-i18n to unlock <i18n> blocks in SFCs
 export default defineConfig({
   plugins: [vue()],
+    base: 'OptiFlow-Landing-Page'
 })
