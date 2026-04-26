@@ -20,9 +20,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -31,13 +29,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # --- NEW: Node.js Compilation Steps ---
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Vue App
+        run: npm run build
+      # --------------------------------------
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # CRUCIAL: Point to the Vue build folder, not the root repository
+          path: './dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
