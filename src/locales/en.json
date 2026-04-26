@@ -49,6 +49,60 @@
       }
     }
   },
+  "pricing-section": {
+    "badge": "Pricing",
+    "description": "We offer different subscription models that adapt to you and scale with your needs with unique benefits <br> to grow your optical store.",
+    "toggle": {
+      "monthly": "Monthly",
+      "annual": "Yearly",
+      "save": "Save 17%"
+    },
+    "cards": {
+      "lite": {
+        "name": "Basic",
+        "tagline": "Discover and explore the use <br> of OptiFlow",
+        "price_monthly": "82",
+        "price_annual": "99",
+        "features": [
+          "Record accurate medical histories and prescriptions.",
+          "Generate quotes and balance your cash register.",
+          "Schedule patient appointments from reception.",
+          "Search for frames in real time."
+        ],
+        "cta": "Select Lite"
+      },
+      "pro": {
+        "name": "Professional",
+        "tagline": "Experience the power of <br> endless possibilities",
+        "price_monthly": "206",
+        "price_annual": "249",
+        "features": [
+          "Everything included in the Lite Plan",
+          "Order and appointment calendar.",
+          "Customers can view the status of their lenses and their balance online.",
+          "Automatic notifications: Email or WhatsApp when the lens is ready.",
+          "Advanced Clinic: Capture digital signatures and upload PDFs of external exams."
+        ],
+        "cta": "Select Pro"
+      },
+      "max": {
+        "name": "Enterprise",
+        "tagline": "Unlock the maximum <br> performance of OptiFlow",
+        "price_monthly": "414",
+        "price_annual": "499",
+        "features": [
+          "Everything included in the Pro Plan",
+          "Measure sales conversion, productivity and laboratory times.",
+          "Customer recovery campaigns and automatic annual reminders.",
+          "Post-delivery NPS surveys and referral code system.",
+          "Record patients in rural campaigns without internet and sync later."
+        ],
+        "cta": "Select Max"
+      }
+    },
+    "disclaimer": "Prices shown do not include applicable taxes. Prices and plans are <br> subject to change at the discretion of OptiFlow. For Enterprise plans contact an advisor.",
+    "contact_btn": "Contact an advisor"
+  },
   "two-experiences": {
     "title": "Experiences for Everyone",
     "client": {

@@ -49,6 +49,60 @@
       }
     }
   },
+  "pricing-section": {
+    "badge": "Precios",
+    "description": "Ofrecemos diferentes modelos de subscripción que se adaptan a ti y escalan contigo con beneficios <br> únicos para crecer tu óptica.",
+    "toggle": {
+      "monthly": "Mensual",
+      "annual": "Anual",
+      "save": "Ahorra 17%"
+    },
+    "cards": {
+      "lite": {
+        "name": "Basic",
+        "tagline": "Conoce y explora el uso <br> de OptiFlow",
+        "price_monthly": "82",
+        "price_annual": "99",
+        "features": [
+          "Registra la anamnesis y recetas visuales exactas.",
+          "Genera cotizaciones y cuadra tu caja.",
+          "Registra las citas de tus pacientes desde recepción.",
+          "Busca monturas en tiempo real."
+        ],
+        "cta": "Seleccionar Lite"
+      },
+      "pro": {
+        "name": "Profesional",
+        "tagline": "Experimenta el poder de <br> infinitas posibilidades",
+        "price_monthly": "206",
+        "price_annual": "249",
+        "features": [
+          "Todas las funciones del Plan Lite",
+          "Calendario de órdenes y citas.",
+          "Los clientes podrán ver el estado de sus lentes y su saldo online.",
+          "Notificaciones Automáticas: Avisos por correo o WhatsApp cuando el lente esté listo.",
+          "Clínica Avanzada: Captura firmas digitales y sube PDFs de exámenes externos."
+        ],
+        "cta": "Seleccionar Pro"
+      },
+      "max": {
+        "name": "Enterprise",
+        "tagline": "Desbloquea el máximo <br> rendimiento de OptiFlow",
+        "price_monthly": "414",
+        "price_annual": "499",
+        "features": [
+          "Todas las funciones del Plan Pro",
+          "Mide la conversión de ventas, productividad y tiempos del laboratorio.",
+          "Campañas de recuperación de clientes y recordatorios anuales automáticos.",
+          "Encuestas NPS post-entrega y sistema de códigos de referidos.",
+          "Registra pacientes en campañas rurales sin internet y sincroniza después."
+        ],
+        "cta": "Seleccionar Max"
+      }
+    },
+    "disclaimer": "Los precios mostrados no incluyen los impuestos aplicables. Los precios y los planes están <br> sujetos a cambios a discreción de OptiFlow. Para planes Empresariales contactar con un asesor.",
+    "contact_btn": "Contactar con un asesor"
+  },
   "two-experiences": {
     "title": "Experiencias para todos",
     "client": {
