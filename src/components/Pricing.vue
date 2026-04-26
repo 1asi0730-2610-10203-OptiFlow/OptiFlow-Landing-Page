@@ -124,7 +124,7 @@ const togglePricing = () => {
   --hover-shadow: rgba(0, 242, 195, 0.15);
 
   padding: 80px 0;
-  background-color: var(--bg-color);
+  background: linear-gradient(135deg, #8ee0a3 0%, #04bda8 100%);
   color: var(--text-main);
 }
 
@@ -136,8 +136,11 @@ const togglePricing = () => {
 
 .pricing-header {
   display: flex;
-  align-items: flex-start;
-  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
   margin-bottom: 52px;
 }
 
@@ -159,8 +162,8 @@ const togglePricing = () => {
   font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--text-muted);
-  margin: 0;
+  color: var(--text-main); /* Cambiado para mejor contraste en el fondo nuevo */
+  margin: 0 auto;
   padding-top: 4px;
   max-width: 800px;
 }
