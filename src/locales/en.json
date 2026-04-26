@@ -1,0 +1,167 @@
+{
+  "navbar": {
+    "about-us": "About Us",
+    "features": "Features",
+    "two-experiences": "Two Experiences",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Log In"
+  },
+  "hero": {
+    "title": "Transform your optics management with OptiFlow",
+    "description": "Connect consultation, sales, and laboratory in a single platform. Eliminate communication errors, reduce wait times, and increase the profitability of your optics.",
+    "cta": "Get started now",
+    "welcome": "Welcome, {name}!",
+    "benefits": {
+      "medical": "Reduce production errors",
+      "satisfaction": "Improve customer satisfaction",
+      "communication": "Improve communication",
+      "workflow": "Efficient workflow"
+    }
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Everything your optics needs to scale to the next level.",
+    "cards": {
+      "consultations": {
+        "title": "Consultation Management",
+        "description": "Smart scheduling with automatic reminders to reduce absences."
+      },
+      "inventory": {
+        "title": "Real Inventory",
+        "description": "Exact control of frames and lenses with low stock alerts."
+      },
+      "laboratory": {
+        "title": "Laboratory",
+        "description": "Order tracking from prescription to final delivery."
+      },
+      "crm": {
+        "title": "Patient CRM",
+        "description": "Complete clinical history and personalized loyalty programs."
+      },
+      "sales": {
+        "title": "Sales & POS",
+        "description": "Fast invoicing and daily income reports."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Key profitability metrics for data-driven decisions."
+      }
+    }
+  },
+  "pricing-section": {
+    "badge": "Pricing",
+    "description": "We offer different subscription models that adapt to you and scale with your needs with unique benefits <br> to grow your optical store.",
+    "toggle": {
+      "monthly": "Monthly",
+      "annual": "Yearly",
+      "save": "Save 17%"
+    },
+    "cards": {
+      "lite": {
+        "name": "Basic",
+        "tagline": "Discover and explore the use <br> of OptiFlow",
+        "price_monthly": "82",
+        "price_annual": "99",
+        "features": [
+          "Record accurate medical histories and prescriptions.",
+          "Generate quotes and balance your cash register.",
+          "Schedule patient appointments from reception.",
+          "Search for frames in real time."
+        ],
+        "cta": "Select Lite"
+      },
+      "pro": {
+        "name": "Professional",
+        "tagline": "Experience the power of <br> endless possibilities",
+        "price_monthly": "206",
+        "price_annual": "249",
+        "features": [
+          "Everything included in the Lite Plan",
+          "Order and appointment calendar.",
+          "Customers can view the status of their lenses and their balance online.",
+          "Automatic notifications: Email or WhatsApp when the lens is ready.",
+          "Advanced Clinic: Capture digital signatures and upload PDFs of external exams."
+        ],
+        "cta": "Select Pro"
+      },
+      "max": {
+        "name": "Enterprise",
+        "tagline": "Unlock the maximum <br> performance of OptiFlow",
+        "price_monthly": "414",
+        "price_annual": "499",
+        "features": [
+          "Everything included in the Pro Plan",
+          "Measure sales conversion, productivity and laboratory times.",
+          "Customer recovery campaigns and automatic annual reminders.",
+          "Post-delivery NPS surveys and referral code system.",
+          "Record patients in rural campaigns without internet and sync later."
+        ],
+        "cta": "Select Max"
+      }
+    },
+    "disclaimer": "Prices shown do not include applicable taxes. Prices and plans are <br> subject to change at the discretion of OptiFlow. For Enterprise plans contact an advisor.",
+    "contact_btn": "Contact an advisor"
+  },
+  "two-experiences": {
+    "title": "Experiences for Everyone",
+    "client": {
+      "heading": "Are you a client?",
+      "subtitle": "Do you feel you're not getting responses from optics? Long delays and lack of communication?",
+      "description": "OptiFlow allows you to track the status of your order from a web application, without having to visit the store in person or constantly ask for updates from the company."
+    },
+    "optics": {
+      "heading": "Are you an optics?",
+      "description1": "Improve your company's CRM through the client application, enhance the issuance and tracking of orders and appointments, improve the registration, creation and analysis of sales, and organize your client information.",
+      "description2": "Our system will accelerate your workflow, minimizing the margin of error by digitalizing and concentrating all communication in a single practical and easy-to-use system."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "cta": {
+      "intro": "Boost your optics with OptiFlow",
+      "heading": "Get OptiFlow Now!",
+      "demo-button": "Request Demo",
+      "stat-optics": "+160 optics in Peru satisfied",
+      "satisfied-clients": "no satisfied clients | one satisfied client | +{n}k satisfied clients"
+    },
+    "form": {
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "message": "Message",
+      "placeholder": "Value",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about-us": "@:navbar.about-us",
+      "careers": "Careers",
+      "contact-sales": "Contact Sales",
+      "leadership": "Leadership",
+      "sustainability": "Sustainability",
+      "accessibility": "Accessibility"
+    },
+    "product": {
+      "title": "Product",
+      "features": "@:navbar.features",
+      "pricing": "@:navbar.pricing",
+      "release-notes": "Release Notes",
+      "enterprise": "Enterprise",
+      "security": "Security",
+      "downloads": "Downloads",
+      "status": "Status"
+    },
+    "legal": {
+      "title": "Legal & Privacy",
+      "privacy-policy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Settings",
+      "compliance": "Compliance",
+      "ip": "Intellectual Property",
+      "subprocessors": "Subprocessors"
+    }
+  }
+}
