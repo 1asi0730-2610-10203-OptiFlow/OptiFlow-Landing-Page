@@ -6,11 +6,11 @@ import LocaleChanger from "./LocaleChanger.vue";
 const activeItem = ref('features');
 
 const menuItems = [
-  { id: 'about-us',        key: 'navbar.about-us' },
-  { id: 'features',        key: 'navbar.features' },
-  { id: 'two-experiences', key: 'navbar.two-experiences' },
-  { id: 'pricing',         key: 'navbar.pricing' },
-  { id: 'contact',         key: 'navbar.contact' },
+  { id: 'about-us',        key: 'navbar.about-us',        href: '#hero-section' },
+  { id: 'features',        key: 'navbar.features',        href: '#features' },
+  { id: 'two-experiences', key: 'navbar.two-experiences', href: '#two-experiences' },
+  { id: 'pricing',         key: 'navbar.pricing',         href: '#pricing' },
+  { id: 'contact',         key: 'navbar.contact',         href: '#contact' },
 ];
 </script>
 
@@ -25,14 +25,15 @@ const menuItems = [
       </div>
 
       <ul class="nav-list">
-        <button
+        <a
           v-for="item in menuItems"
           :key="item.id"
+          :href="item.href"
           @click="activeItem = item.id"
           :class="['nav-item', { 'is-active': activeItem === item.id }]"
         >
           {{ $t(item.key) }}
-        </button>
+        </a>
       </ul>
 
       <div class="login-btn-wrapper">
@@ -85,6 +86,8 @@ const menuItems = [
   cursor: pointer;
   padding: 8px 12px;
   transition: color 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .nav-item::after {
