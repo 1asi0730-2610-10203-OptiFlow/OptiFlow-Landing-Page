@@ -6,7 +6,7 @@ import LocaleChanger from "./LocaleChanger.vue";
 const activeItem = ref('features');
 
 const menuItems = [
-  { id: 'about-us',        key: 'navbar.about-us',        href: '#hero-section' },
+  { id: 'about-us',        key: 'navbar.about-us',        href: '#about-us' },
   { id: 'features',        key: 'navbar.features',        href: '#features' },
   { id: 'two-experiences', key: 'navbar.two-experiences', href: '#two-experiences' },
   { id: 'pricing',         key: 'navbar.pricing',         href: '#pricing' },
