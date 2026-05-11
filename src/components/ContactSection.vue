@@ -14,7 +14,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <section class="contact-section">
+  <section class="contact-section" id="contact">
     <div class="contact-container">
       <div class="contact-header">
         <h1>{{ $t('contact.title') }}</h1>
