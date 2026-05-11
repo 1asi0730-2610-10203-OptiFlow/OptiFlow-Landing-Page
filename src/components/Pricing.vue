@@ -43,7 +43,7 @@ function handleSubscribe(planKey) {
 </script>
 
 <template>
-  <section class="pricing" id="precios">
+  <section class="pricing" id="pricing">
     <div class="pricing-container">
       <!-- Header -->
       <div class="pricing-header">

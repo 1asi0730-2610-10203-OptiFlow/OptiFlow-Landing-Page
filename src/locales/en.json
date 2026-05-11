@@ -134,34 +134,19 @@
       "submit": "Submit"
     }
   },
+  "about": {
+    "title": "About Us",
+    "mission": {
+      "title": "Mission",
+      "text": "OptiFlow's mission is to offer comprehensive ERP/CRM software oriented to optical stores and visual health centers, optimizing their administrative workflows. We seek to transform the manual management of medical records, commercial inventories, and laboratory orders into actionable, cloud-centralized data, ensuring efficient and profitable business operations."
+    },
+    "vision": {
+      "title": "Vision",
+      "text": "Our vision is to consolidate ourselves as the leading platform for operational and commercial management in the ophthalmology sector, promoting modern and predictive administration that eliminates information silos between the consultation room, the sales floor, and the laboratory, driving optical stores toward absolute digital transformation."
+    },
+    "banner": "OptiFlow improves the efficiency of processes for issuing appointments with clients or laboratory orders, addressing the main problem faced by optical stores — the lack of CRM and communication between staff, which generally leads to lost client records, incorrect laboratory orders, long delivery times, and more."
+  },
   "footer": {
-    "company": {
-      "title": "Company",
-      "about-us": "@:navbar.about-us",
-      "careers": "Careers",
-      "contact-sales": "Contact Sales",
-      "leadership": "Leadership",
-      "sustainability": "Sustainability",
-      "accessibility": "Accessibility"
-    },
-    "product": {
-      "title": "Product",
-      "features": "@:navbar.features",
-      "pricing": "@:navbar.pricing",
-      "release-notes": "Release Notes",
-      "enterprise": "Enterprise",
-      "security": "Security",
-      "downloads": "Downloads",
-      "status": "Status"
-    },
-    "legal": {
-      "title": "Legal & Privacy",
-      "privacy-policy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookies": "Cookie Settings",
-      "compliance": "Compliance",
-      "ip": "Intellectual Property",
-      "subprocessors": "Subprocessors"
-    }
+    "copyright": "All Rights Reserved. OptiFlow 2026"
   }
 }
