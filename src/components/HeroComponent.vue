@@ -269,4 +269,31 @@ onUnmounted(() => {
   color: white;
   max-width: 200px;
 }
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px 20px 40px;
+  }
+
+  .hero-title {
+    padding-top: 60px;
+  }
+
+  .hero-title h1 {
+    font-size: 28px;
+  }
+
+  .benefits-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  .benefit-item {
+    padding: 16px 12px;
+  }
+}
 </style>
