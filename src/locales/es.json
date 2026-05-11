@@ -135,33 +135,6 @@
     }
   },
   "footer": {
-    "company": {
-      "title": "Empresa",
-      "about-us": "@:navbar.about-us",
-      "careers": "Empleos",
-      "contact-sales": "Contactar Ventas",
-      "leadership": "Liderazgo",
-      "sustainability": "Sostenibilidad",
-      "accessibility": "Accesibilidad"
-    },
-    "product": {
-      "title": "Producto",
-      "features": "@:navbar.features",
-      "pricing": "@:navbar.pricing",
-      "release-notes": "Notas de Versión",
-      "enterprise": "Empresarial",
-      "security": "Seguridad",
-      "downloads": "Descargas",
-      "status": "Estado"
-    },
-    "legal": {
-      "title": "Legal y Privacidad",
-      "privacy-policy": "Política de Privacidad",
-      "terms": "Términos de Servicio",
-      "cookies": "Configuración de Cookies",
-      "compliance": "Cumplimiento",
-      "ip": "Propiedad Intelectual",
-      "subprocessors": "Subprocesadores"
-    }
+    "copyright": "Todos los derechos reservados. OptiFlow 2026"
   }
 }
