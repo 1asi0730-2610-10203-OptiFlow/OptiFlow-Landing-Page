@@ -1,15 +1,49 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const isAnnual = ref(false);
+const isAnnual = ref(false)
 
 const togglePricing = () => {
-  isAnnual.value = !isAnnual.value;
-};
+  isAnnual.value = !isAnnual.value
+}
+
+const plans = {
+  lite: {
+    planId:       'basic',
+    planName:     'Lite',
+    priceMonthly: '99',
+    priceAnnual:  '79'
+  },
+  pro: {
+    planId:       'pro',
+    planName:     'Pro',
+    priceMonthly: '199',
+    priceAnnual:  '159'
+  },
+  max: {
+    planId:       'enterprise',
+    planName:     'Max',
+    priceMonthly: '349',
+    priceAnnual:  '279'
+  }
+}
+
+const paymentLinks = {
+  lite: import.meta.env.VITE_STRIPE_LINK_BASIC,
+  pro:  import.meta.env.VITE_STRIPE_LINK_PRO,
+  max:  import.meta.env.VITE_STRIPE_LINK_ENTERPRISE
+}
+
+const loadingPlan = ref(null)
+
+function handleSubscribe(planKey) {
+  loadingPlan.value = planKey
+  window.location.href = paymentLinks[planKey]
+}
 </script>
 
 <template>
-  <section class="pricing" id="precios">
+  <section class="pricing" id="pricing">
     <div class="pricing-container">
       <!-- Header -->
       <div class="pricing-header">
@@ -54,7 +88,13 @@ const togglePricing = () => {
                 <span class="check-icon">✓</span> {{ $rt(feature) }}
               </li>
             </ul>
-            <button class="plan-btn outline">{{ $t('pricing-section.cards.lite.cta') }}</button>
+            <button
+                class="plan-btn outline"
+                :disabled="loadingPlan === 'lite'"
+                @click="handleSubscribe('lite')"
+            >
+              {{ loadingPlan === 'lite' ? '...' : $t('pricing-section.cards.lite.cta') }}
+            </button>
           </div>
         </article>
 
@@ -75,7 +115,13 @@ const togglePricing = () => {
                 <span class="check-icon">✓</span> {{ $rt(feature) }}
               </li>
             </ul>
-            <button class="plan-btn solid">{{ $t('pricing-section.cards.pro.cta') }}</button>
+            <button
+                class="plan-btn solid"
+                :disabled="loadingPlan === 'pro'"
+                @click="handleSubscribe('pro')"
+            >
+              {{ loadingPlan === 'pro' ? '...' : $t('pricing-section.cards.pro.cta') }}
+            </button>
           </div>
         </article>
 
@@ -96,7 +142,13 @@ const togglePricing = () => {
                 <span class="check-icon">✓</span> {{ $rt(feature) }}
               </li>
             </ul>
-            <button class="plan-btn outline">{{ $t('pricing-section.cards.max.cta') }}</button>
+            <button
+                class="plan-btn outline"
+                :disabled="loadingPlan === 'max'"
+                @click="handleSubscribe('max')"
+            >
+              {{ loadingPlan === 'max' ? '...' : $t('pricing-section.cards.max.cta') }}
+            </button>
           </div>
         </article>
       </div>

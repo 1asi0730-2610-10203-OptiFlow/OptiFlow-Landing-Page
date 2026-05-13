@@ -134,34 +134,19 @@
       "submit": "Enviar"
     }
   },
+  "about": {
+    "title": "Sobre Nosotros",
+    "mission": {
+      "title": "Misión",
+      "text": "La misión de OptiFlow es ofrecer un software integral tipo ERP/CRM orientado a ópticas y centros de salud visual, optimizando sus flujos de trabajo administrativos. Buscamos transformar la gestión manual de historiales médicos, inventarios comerciales y órdenes de laboratorio en datos accionables y centralizados en la nube, garantizando operaciones comerciales eficientes y rentables."
+    },
+    "vision": {
+      "title": "Visión",
+      "text": "Nuestra visión es consolidarnos como la plataforma líder en gestión operativa y comercial para el sector oftalmológico, promoviendo una administración moderna y predictiva que elimine los silos de información entre el consultorio, el piso de ventas y el laboratorio, impulsando a las ópticas hacia una transformación digital absoluta."
+    },
+    "banner": "OptiFlow permite mejorar la eficiencia de los procesos de emisión de citas con clientes u órdenes de laboratorio, de tal forma que se ataca al problema principal que sufren las ópticas, la falta de CRM y falta de comunicación entre el personal, lo que generalmente deriva a expedientes de clientes perdidos, órdenes erróneas al laboratorio, tiempos de entrega largos, entre otros."
+  },
   "footer": {
-    "company": {
-      "title": "Empresa",
-      "about-us": "@:navbar.about-us",
-      "careers": "Empleos",
-      "contact-sales": "Contactar Ventas",
-      "leadership": "Liderazgo",
-      "sustainability": "Sostenibilidad",
-      "accessibility": "Accesibilidad"
-    },
-    "product": {
-      "title": "Producto",
-      "features": "@:navbar.features",
-      "pricing": "@:navbar.pricing",
-      "release-notes": "Notas de Versión",
-      "enterprise": "Empresarial",
-      "security": "Seguridad",
-      "downloads": "Descargas",
-      "status": "Estado"
-    },
-    "legal": {
-      "title": "Legal y Privacidad",
-      "privacy-policy": "Política de Privacidad",
-      "terms": "Términos de Servicio",
-      "cookies": "Configuración de Cookies",
-      "compliance": "Cumplimiento",
-      "ip": "Propiedad Intelectual",
-      "subprocessors": "Subprocesadores"
-    }
+    "copyright": "Todos los derechos reservados. OptiFlow 2026"
   }
 }

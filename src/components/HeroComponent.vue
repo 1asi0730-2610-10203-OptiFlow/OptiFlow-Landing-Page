@@ -116,13 +116,13 @@ onUnmounted(() => {
       <div class="hero-title" id="hero-title">
         <h1>{{ $t('hero.title') }}</h1>
         <p class="hero-description">{{ $t('hero.description') }}</p>
-        <button type="button" class="hero-button">
+        <a href="https://proud-sea-096db2110.7.azurestaticapps.net" class="hero-button">
           {{ $t('hero.cta') }}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon" aria-hidden="true">
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
           </svg>
-        </button>
+        </a>
       </div>
 
       <div class="benefits-column" id="benefits-column">
@@ -211,6 +211,8 @@ onUnmounted(() => {
   padding: 12px 24px;
   text-align: center;
   transition: background 0.3s;
+  text-decoration: none;
+  color: white;
 }
 
 .hero-button:hover {
@@ -268,5 +270,32 @@ onUnmounted(() => {
   font-size: 14px;
   color: white;
   max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px 20px 40px;
+  }
+
+  .hero-title {
+    padding-top: 60px;
+  }
+
+  .hero-title h1 {
+    font-size: 28px;
+  }
+
+  .benefits-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  .benefit-item {
+    padding: 16px 12px;
+  }
 }
 </style>
