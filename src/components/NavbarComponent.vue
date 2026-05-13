@@ -44,7 +44,7 @@ function handleNavClick(id) {
 
       <div class="login-btn-wrapper">
         <LocaleChanger />
-        <button class="login-btn" id="login-btn">{{ $t('navbar.login') }}</button>
+        <pv-button as="a" href="https://proud-sea-096db2110.7.azurestaticapps.net" class="login-btn" id="login-btn">{{ $t('navbar.login') }}</pv-button>
       </div>
 
       <button class="hamburger" :class="{ 'is-open': menuOpen }" @click="menuOpen = !menuOpen" aria-label="Toggle menu">
@@ -66,7 +66,7 @@ function handleNavClick(id) {
       </a>
       <div class="mobile-actions">
         <LocaleChanger />
-        <button class="login-btn">{{ $t('navbar.login') }}</button>
+        <pv-button as="a" href="https://proud-sea-096db2110.7.azurestaticapps.net" class="login-btn">{{ $t('navbar.login') }}</pv-button>
       </div>
     </div>
   </header>
@@ -138,6 +138,7 @@ function handleNavClick(id) {
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s ease;
+  text-decoration: none;
 }
 
 .login-btn:hover {

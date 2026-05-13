@@ -12,8 +12,10 @@
     "@fontsource/istok-web": "^5.2.8",
     "@fontsource/josefin-sans": "^5.2.8",
     "@fontsource/montserrat": "^5.2.8",
+    "@primevue/themes": "^4.5.4",
     "@stripe/stripe-js": "^9.4.0",
     "fonts": "^0.0.2",
+    "primevue": "^4.5.5",
     "three": "^0.184.0",
     "vue": "^3.5.32",
     "vue-i18n": "^11.3.2"
