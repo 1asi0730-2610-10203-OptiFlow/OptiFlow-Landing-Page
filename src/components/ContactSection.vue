@@ -1,5 +1,5 @@
 <script setup>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 
 const form = reactive({
   name: '',
@@ -8,8 +8,19 @@ const form = reactive({
   message: '',
 });
 
+const showNotif = ref(false);
+
 const handleSubmit = () => {
   console.log('Datos enviados:', form);
+  showNotif.value = true;
+  setTimeout(() => {
+    showNotif.value = false;
+  }, 3000);
+  
+  form.name = '';
+  form.surname = '';
+  form.email = '';
+  form.message = '';
 };
 </script>
 
@@ -24,7 +35,7 @@ const handleSubmit = () => {
         <div class="cta-message">
           <p class="cta-intro-text">{{ $t('contact.cta.intro') }}</p>
           <h2 class="cta-title">{{ $t('contact.cta.heading') }}</h2>
-          <button class="cta-demo-button">{{ $t('contact.cta.demo-button') }}</button>
+          <a href="https://proud-sea-096db2110.7.azurestaticapps.net" class="cta-demo-button" style="text-decoration: none; display: inline-block;">{{ $t('contact.cta.demo-button') }}</a>
           <div class="stats-text">
             <span>{{ $t('contact.cta.stat-optics') }}</span>
             <!-- Pluralization: $t(key, n) selects the plural form based on count -->
@@ -33,6 +44,7 @@ const handleSubmit = () => {
         </div>
 
         <div class="form-card">
+          <div v-if="showNotif" class="basic-notif">email sent</div>
           <form @submit.prevent="handleSubmit">
             <div class="form-group">
               <label for="name">{{ $t('contact.form.name') }}</label>
@@ -141,6 +153,16 @@ const handleSubmit = () => {
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.basic-notif {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .form-group {
