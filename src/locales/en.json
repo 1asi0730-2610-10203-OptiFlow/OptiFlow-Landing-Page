@@ -61,8 +61,8 @@
       "lite": {
         "name": "Basic",
         "tagline": "Discover and explore the use <br> of OptiFlow",
-        "price_monthly": "82",
-        "price_annual": "99",
+        "price_monthly": "99",
+        "price_annual": "82",
         "features": [
           "Record accurate medical histories and prescriptions.",
           "Generate quotes and balance your cash register.",
@@ -74,8 +74,8 @@
       "pro": {
         "name": "Professional",
         "tagline": "Experience the power of <br> endless possibilities",
-        "price_monthly": "206",
-        "price_annual": "249",
+        "price_monthly": "249",
+        "price_annual": "206",
         "features": [
           "Everything included in the Lite Plan",
           "Order and appointment calendar.",
@@ -88,8 +88,8 @@
       "max": {
         "name": "Enterprise",
         "tagline": "Unlock the maximum <br> performance of OptiFlow",
-        "price_monthly": "414",
-        "price_annual": "499",
+        "price_monthly": "499",
+        "price_annual": "414",
         "features": [
           "Everything included in the Pro Plan",
           "Measure sales conversion, productivity and laboratory times.",

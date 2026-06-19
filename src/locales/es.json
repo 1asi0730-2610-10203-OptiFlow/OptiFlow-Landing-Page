@@ -61,8 +61,8 @@
       "lite": {
         "name": "Basic",
         "tagline": "Conoce y explora el uso <br> de OptiFlow",
-        "price_monthly": "82",
-        "price_annual": "99",
+        "price_monthly": "99",
+        "price_annual": "82",
         "features": [
           "Registra la anamnesis y recetas visuales exactas.",
           "Genera cotizaciones y cuadra tu caja.",
@@ -74,8 +74,8 @@
       "pro": {
         "name": "Profesional",
         "tagline": "Experimenta el poder de <br> infinitas posibilidades",
-        "price_monthly": "206",
-        "price_annual": "249",
+        "price_monthly": "249",
+        "price_annual": "206",
         "features": [
           "Todas las funciones del Plan Lite",
           "Calendario de órdenes y citas.",
@@ -88,8 +88,8 @@
       "max": {
         "name": "Enterprise",
         "tagline": "Desbloquea el máximo <br> rendimiento de OptiFlow",
-        "price_monthly": "414",
-        "price_annual": "499",
+        "price_monthly": "499",
+        "price_annual": "414",
         "features": [
           "Todas las funciones del Plan Pro",
           "Mide la conversión de ventas, productividad y tiempos del laboratorio.",
