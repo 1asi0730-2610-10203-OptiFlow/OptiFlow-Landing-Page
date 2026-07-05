@@ -8,6 +8,7 @@
     "login": "Log In"
   },
   "hero": {
+    "badge": "ERP/CRM software for optics",
     "title": "Transform your optics management with OptiFlow",
     "description": "Connect consultation, sales, and laboratory in a single platform. Eliminate communication errors, reduce wait times, and increase the profitability of your optics.",
     "cta": "Get started now",
@@ -101,7 +102,8 @@
       }
     },
     "disclaimer": "Prices shown do not include applicable taxes. Prices and plans are <br> subject to change at the discretion of OptiFlow. For Enterprise plans contact an advisor.",
-    "contact_btn": "Contact an advisor"
+    "contact_btn": "Contact an advisor",
+    "popular": "Most popular"
   },
   "two-experiences": {
     "title": "Experiences for Everyone",

@@ -1,8 +1,3 @@
-<script setup>
-import '@fontsource/josefin-sans/700.css';
-import '@fontsource/montserrat/400.css';
-</script>
-
 <template>
   <section class="about-section" id="about-us">
     <div class="about-bg-decoration"></div>
@@ -90,7 +85,7 @@ import '@fontsource/montserrat/400.css';
 }
 
 .about-title {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: 40px;
   color: #ffffff;
@@ -155,7 +150,7 @@ import '@fontsource/montserrat/400.css';
 }
 
 .card-heading {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: 22px;
   color: #00c1b0;
@@ -163,7 +158,7 @@ import '@fontsource/montserrat/400.css';
 }
 
 .card-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #333;
@@ -200,7 +195,7 @@ import '@fontsource/montserrat/400.css';
 }
 
 .banner-title {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 700;
   font-size: 22px;
   color: #ffffff;
@@ -208,7 +203,7 @@ import '@fontsource/montserrat/400.css';
 }
 
 .banner-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: rgba(255, 255, 255, 0.75);

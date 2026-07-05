@@ -75,7 +75,7 @@ function handleNavClick(id) {
 <style scoped>
 .main-header {
   background: black;
-  font-family: "Istok Web";
+  font-family: 'Segoe UI', sans-serif;
   position: sticky;
   top: 0;
   z-index: 100;
