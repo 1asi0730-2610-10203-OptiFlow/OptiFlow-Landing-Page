@@ -11,9 +11,14 @@ const baseUrl = import.meta.env.VITE_APP_BASE_URL || 'https://proud-sea-096db211
 
 const loadingPlan = ref(null)
 
+const tierByKey = { lite: 'BASIC', pro: 'PROFESSIONAL', max: 'ENTERPRISE' }
+
 function handleSubscribe(planKey) {
   loadingPlan.value = planKey
-  window.location.href = `${baseUrl}/register`
+  const tier = tierByKey[planKey] || 'BASIC'
+  const period = isAnnual.value ? 'yearly' : 'monthly'
+  // Carry the plan and billing period into the app's admin-only registration → Stripe → login funnel.
+  window.location.href = `${baseUrl}/register?plan=${tier}&period=${period}`
 }
 </script>
 
