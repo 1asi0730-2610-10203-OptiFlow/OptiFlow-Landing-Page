@@ -5,6 +5,9 @@ import * as THREE from 'three';
 
 const { t } = useI18n();
 
+// Send visitors to the deployed app's registration, not a local dev port.
+const baseUrl = import.meta.env.VITE_APP_BASE_URL || 'https://proud-sea-096db2110.7.azurestaticapps.net';
+
 const canvasRef = ref(null);
 
 let scene, camera, renderer, animationId;
@@ -310,7 +313,7 @@ onUnmounted(() => {
         <p class="hero-description">{{ $t('hero.description') }}</p>
 
         <div class="hero-actions">
-          <a href="http://localhost:5174/register" class="hero-button">
+          <a :href="`${baseUrl}/register`" class="hero-button">
             {{ $t('hero.cta') }}
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon" aria-hidden="true">
               <path d="M5 12h14"></path>
