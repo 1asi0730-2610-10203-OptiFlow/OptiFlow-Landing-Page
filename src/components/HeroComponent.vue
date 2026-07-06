@@ -310,7 +310,7 @@ onUnmounted(() => {
         <p class="hero-description">{{ $t('hero.description') }}</p>
 
         <div class="hero-actions">
-          <a href="https://proud-sea-096db2110.7.azurestaticapps.net" class="hero-button">
+          <a href="http://localhost:5174/register" class="hero-button">
             {{ $t('hero.cta') }}
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon" aria-hidden="true">
               <path d="M5 12h14"></path>

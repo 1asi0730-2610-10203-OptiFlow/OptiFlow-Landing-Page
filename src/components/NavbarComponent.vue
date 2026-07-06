@@ -12,6 +12,7 @@ const menuItems = [
   { id: 'two-experiences', key: 'navbar.two-experiences', href: '#two-experiences' },
   { id: 'pricing',         key: 'navbar.pricing',         href: '#pricing' },
   { id: 'contact',         key: 'navbar.contact',         href: '#contact' },
+  { id: 'meet-us',         key: 'navbar.meet-us',         href: '#meet-us' },
 ];
 
 function handleNavClick(id) {
@@ -44,7 +45,7 @@ function handleNavClick(id) {
 
       <div class="login-btn-wrapper">
         <LocaleChanger />
-        <pv-button as="a" href="https://proud-sea-096db2110.7.azurestaticapps.net" class="login-btn" id="login-btn">{{ $t('navbar.login') }}</pv-button>
+        <pv-button as="a" href="http://localhost:5174" class="login-btn" id="login-btn">{{ $t('navbar.login') }}</pv-button>
       </div>
 
       <button class="hamburger" :class="{ 'is-open': menuOpen }" @click="menuOpen = !menuOpen" aria-label="Toggle menu">
@@ -66,7 +67,7 @@ function handleNavClick(id) {
       </a>
       <div class="mobile-actions">
         <LocaleChanger />
-        <pv-button as="a" href="https://proud-sea-096db2110.7.azurestaticapps.net" class="login-btn">{{ $t('navbar.login') }}</pv-button>
+        <pv-button as="a" href="http://localhost:5174" class="login-btn">{{ $t('navbar.login') }}</pv-button>
       </div>
     </div>
   </header>
