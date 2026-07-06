@@ -5,9 +5,11 @@
     "two-experiences": "Dos Experiencias",
     "pricing": "Precios",
     "contact": "Contacto",
+    "meet-us": "Conócenos",
     "login": "Iniciar Sesión"
   },
   "hero": {
+    "badge": "Software ERP/CRM para ópticas",
     "title": "Transforma la gestión de tu óptica con OptiFlow",
     "description": "Conecta consultorio, ventas y laboratorio en una sola plataforma. Elimina errores de comunicación, reduce tiempos de espera y aumenta la rentabilidad de tu óptica.",
     "cta": "Comenzar ahora",
@@ -101,7 +103,8 @@
       }
     },
     "disclaimer": "Los precios mostrados no incluyen los impuestos aplicables. Los precios y los planes están <br> sujetos a cambios a discreción de OptiFlow. Para planes Empresariales contactar con un asesor.",
-    "contact_btn": "Contactar con un asesor"
+    "contact_btn": "Contactar con un asesor",
+    "popular": "Más popular"
   },
   "two-experiences": {
     "title": "Experiencias para todos",
@@ -145,6 +148,21 @@
       "text": "Nuestra visión es consolidarnos como la plataforma líder en gestión operativa y comercial para el sector oftalmológico, promoviendo una administración moderna y predictiva que elimine los silos de información entre el consultorio, el piso de ventas y el laboratorio, impulsando a las ópticas hacia una transformación digital absoluta."
     },
     "banner": "OptiFlow permite mejorar la eficiencia de los procesos de emisión de citas con clientes u órdenes de laboratorio, de tal forma que se ataca al problema principal que sufren las ópticas, la falta de CRM y falta de comunicación entre el personal, lo que generalmente deriva a expedientes de clientes perdidos, órdenes erróneas al laboratorio, tiempos de entrega largos, entre otros."
+  },
+  "meet-us": {
+    "badge": "Conócenos",
+    "title": "Conoce OptiFlow",
+    "subtitle": "Dos videos cortos para ver el producto en acción y conocer al equipo que lo está construyendo.",
+    "product": {
+      "label": "El Producto",
+      "heading": "OptiFlow en Acción",
+      "text": "Un recorrido rápido de cómo OptiFlow conecta consultorio, ventas y laboratorio en una sola plataforma fácil de usar."
+    },
+    "team": {
+      "label": "El Equipo",
+      "heading": "Conoce al Equipo",
+      "text": "Conoce a las personas detrás de OptiFlow y la pasión que nos impulsa a transformar la gestión de las ópticas."
+    }
   },
   "footer": {
     "copyright": "Todos los derechos reservados. OptiFlow 2026"

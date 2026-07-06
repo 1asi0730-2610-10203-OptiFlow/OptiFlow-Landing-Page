@@ -5,9 +5,11 @@
     "two-experiences": "Two Experiences",
     "pricing": "Pricing",
     "contact": "Contact",
+    "meet-us": "Meet Us",
     "login": "Log In"
   },
   "hero": {
+    "badge": "ERP/CRM software for optics",
     "title": "Transform your optics management with OptiFlow",
     "description": "Connect consultation, sales, and laboratory in a single platform. Eliminate communication errors, reduce wait times, and increase the profitability of your optics.",
     "cta": "Get started now",
@@ -101,7 +103,8 @@
       }
     },
     "disclaimer": "Prices shown do not include applicable taxes. Prices and plans are <br> subject to change at the discretion of OptiFlow. For Enterprise plans contact an advisor.",
-    "contact_btn": "Contact an advisor"
+    "contact_btn": "Contact an advisor",
+    "popular": "Most popular"
   },
   "two-experiences": {
     "title": "Experiences for Everyone",
@@ -145,6 +148,21 @@
       "text": "Our vision is to consolidate ourselves as the leading platform for operational and commercial management in the ophthalmology sector, promoting modern and predictive administration that eliminates information silos between the consultation room, the sales floor, and the laboratory, driving optical stores toward absolute digital transformation."
     },
     "banner": "OptiFlow improves the efficiency of processes for issuing appointments with clients or laboratory orders, addressing the main problem faced by optical stores — the lack of CRM and communication between staff, which generally leads to lost client records, incorrect laboratory orders, long delivery times, and more."
+  },
+  "meet-us": {
+    "badge": "Meet Us",
+    "title": "Get to Know OptiFlow",
+    "subtitle": "Two short videos to see the product in action and meet the people building it.",
+    "product": {
+      "label": "The Product",
+      "heading": "OptiFlow in Action",
+      "text": "A quick walkthrough of how OptiFlow connects consultation, sales, and laboratory in a single, easy-to-use platform."
+    },
+    "team": {
+      "label": "The Team",
+      "heading": "Meet the Team",
+      "text": "Get to know the people behind OptiFlow and the passion driving us to transform optics management."
+    }
   },
   "footer": {
     "copyright": "All Rights Reserved. OptiFlow 2026"
