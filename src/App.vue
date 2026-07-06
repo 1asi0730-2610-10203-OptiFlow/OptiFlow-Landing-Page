@@ -7,6 +7,7 @@ import ContactSection from "./components/ContactSection.vue";
 import Footer from "./components/Footer.vue";
 import TwoExperiences from "./components/TwoExperiences.vue";
 import Pricing from "./components/Pricing.vue";
+import MeetUsSection from "./components/MeetUsSection.vue";
 </script>
 <template>
   <NavbarComponent/>
@@ -16,5 +17,6 @@ import Pricing from "./components/Pricing.vue";
   <TwoExperiences/>
   <Pricing/>
   <ContactSection />
+  <MeetUsSection/>
   <Footer />
 </template>
