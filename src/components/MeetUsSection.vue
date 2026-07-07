@@ -1,8 +1,7 @@
 <script setup>
 const PRODUCT_VIDEO_ID = 'Girt_BoVPt4';
 
-const TEAM_VIDEO_EMBED_URL = 'https://www.canva.com/design/DAHORfJQdwA/3K6Vy6wpk10S1bUKFjRbQw/watch?embed';
-const TEAM_VIDEO_LINK = 'https://www.canva.com/design/DAHORfJQdwA/3K6Vy6wpk10S1bUKFjRbQw/watch?utm_content=DAHORfJQdwA&utm_campaign=designshare&utm_medium=embeds&utm_source=link';
+const TEAM_VIDEO_ID = 'Dg5B3RLpC-0';
 </script>
 
 <template>
@@ -41,14 +40,14 @@ const TEAM_VIDEO_LINK = 'https://www.canva.com/design/DAHORfJQdwA/3K6Vy6wpk10S1b
         <article class="video-card">
           <div class="video-frame">
             <iframe
-              :src="TEAM_VIDEO_EMBED_URL"
+              :src="`https://www.youtube.com/embed/${TEAM_VIDEO_ID}`"
               title="OptiFlow - Meet the team"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
               loading="lazy"
-              allow="fullscreen"
-              allowfullscreen="allowfullscreen"
             ></iframe>
           </div>
-          <a :href="TEAM_VIDEO_LINK" target="_blank" rel="noopener" class="video-attribution">OptiFlow, de Nicolás Fernando</a>
           <span class="video-label team-label">{{ $t('meet-us.team.label') }}</span>
           <h3 class="video-heading">{{ $t('meet-us.team.heading') }}</h3>
           <p class="video-text">{{ $t('meet-us.team.text') }}</p>
