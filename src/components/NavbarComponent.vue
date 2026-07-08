@@ -133,20 +133,23 @@ function handleNavClick(id) {
 }
 
 .login-btn {
-  background: #9ec3cf;
-  color: black;
-  padding: 10px 30px;
-  border-radius: 10px;
+  background: #00C1B0;
+  color: #04231f;
+  padding: 9px 28px;
+  border-radius: 999px;
   border: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
   text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 193, 176, 0.25);
 }
 
 .login-btn:hover {
-  background: #c8e3ed;
+  background: #16d6c4;
+  box-shadow: 0 4px 16px rgba(0, 193, 176, 0.4);
+  transform: translateY(-1px);
 }
 
 .login-btn-wrapper {
