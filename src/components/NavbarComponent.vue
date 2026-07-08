@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import logo from "../assets/logo.svg";
 import LocaleChanger from "./LocaleChanger.vue";
+import GoogleLoginButton from "./GoogleLoginButton.vue";
 
 const activeItem = ref('features');
 const menuOpen = ref(false);
@@ -48,6 +49,7 @@ function handleNavClick(id) {
 
       <div class="login-btn-wrapper">
         <LocaleChanger />
+        <GoogleLoginButton />
         <pv-button as="a" :href="`${baseUrl}/login`" class="login-btn" id="login-btn">{{ $t('navbar.login') }}</pv-button>
       </div>
 
@@ -70,6 +72,7 @@ function handleNavClick(id) {
       </a>
       <div class="mobile-actions">
         <LocaleChanger />
+        <GoogleLoginButton />
         <pv-button as="a" :href="`${baseUrl}/login`" class="login-btn">{{ $t('navbar.login') }}</pv-button>
       </div>
     </div>
