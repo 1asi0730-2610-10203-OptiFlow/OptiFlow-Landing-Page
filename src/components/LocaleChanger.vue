@@ -21,14 +21,20 @@ const locales = [
 
 <style scoped>
 .locale-select {
-  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(0, 193, 176, 0.06);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300C1B0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
   color: #cbd5e1;
-  border: 1px solid #334155;
-  border-radius: 6px;
-  padding: 6px 10px;
+  border: 1px solid rgba(0, 193, 176, 0.3);
+  border-radius: 999px;
+  padding: 8px 34px 8px 16px;
   font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
   outline: none;
 }
 
@@ -36,10 +42,11 @@ const locales = [
 .locale-select:focus {
   border-color: #00C1B0;
   color: #ffffff;
+  background-color: rgba(0, 193, 176, 0.12);
 }
 
 .locale-select option {
-  background: #0f172a;
+  background: #0d1a1f;
   color: #ffffff;
 }
 </style>
